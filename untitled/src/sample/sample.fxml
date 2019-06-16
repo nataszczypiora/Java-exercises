@@ -1,0 +1,40 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <VBox fx:id="po" visible="true" spacing="50">
+        <Label fx:id="wyswietlanie" text="Aktywne budziki" />
+        <HBox>
+            <Button fx:id="dodaj" text="Dodaj" onAction="#dodawanie" />
+            <Button fx:id="zakoncz" text = "Zakocz" onAction="#zakoncz"/>
+        </HBox>
+    </VBox>
+
+    <HBox fx:id="spr" visible="false" >
+        <VBox spacing="10">
+            <Label text = "wybierz godzine" />
+            <ChoiceBox fx:id="godzina"/>
+            <Label text = "wybierz minuty" />
+            <ChoiceBox fx:id="minuty"/>
+            <Label text = "dzien tygodnia" />
+            <ChoiceBox fx:id="dzien"/>
+            <Label text = "czy powatarzac co tydzien?" />
+            <ChoiceBox fx:id="tydzien"/>
+            <Label text = "glosnosc budzika" />
+            <ChoiceBox fx:id="glosnosc" />
+            <Label text = "Podaj nazwe budzika" />
+            <TextField fx:id ="nazwa"/>
+            <Button fx:id = "anuluj" text="anuluj" onAction="#anuluj" />
+            <Button fx:id = 'ok' text="zatwierdz" onAction="#zatwierdzenie" />
+        </VBox>
+    </HBox>
+
+
+</GridPane>
